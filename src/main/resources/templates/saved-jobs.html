@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <link
+            th:rel="stylesheet"
+            th:href="@{/webjars/bootstrap/css/bootstrap.min.css} "
+    />
+    <link
+            rel="stylesheet"
+            type="text/css"
+            media="all"
+            th:href="@{/css/font-awesome.min.css}"
+    />
+    <link
+            rel="stylesheet"
+            type="text/css"
+            media="all"
+            th:href="@{/css/styles.css}"
+    />
+    <link
+            href="https://fonts.googleapis.com/css?family=Montserrat"
+            rel="stylesheet"
+    />
+    <meta charset="UTF-8">
+    <title>Saved Jobs</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+</head>
+<body>
+<header>
+    <h1>Saved Jobs</h1>
+</header>
+<main>
+    <div th:if="${savedJobs != null}">
+        <ul>
+            <li th:each="job : ${savedJobs}">
+                <h2 th:text="${job.title}">Job Title</h2>
+                <p th:text="${job.description}">Job Description</p>
+                <p th:text="${job.companyName}">Company Name</p>
+                <p th:text="${job.location}">Location</p>
+            </li>
+        </ul>
+    </div>
+    <div th:if="${savedJobs == null}">
+        <p>No saved jobs found.</p>
+    </div>
+</main>
+</body>
+</html>
