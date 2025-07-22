@@ -23,8 +23,6 @@ The Job Portal project aims to create a robust and user-friendly platform for jo
 
 - **Home Page**: Provides an overview of the portal with easy navigation to other sections.
 
-![Home](https://github.com/hey-its-d2t2/Job-Portal/assets/63626210/8a550992-bacb-40eb-acf5-82806264d91d)
-
 
 - ## **User Authentication**:
   - **Login and Registration for Job Seekers**: Allows job seekers to register, log in, and manage their profiles.
